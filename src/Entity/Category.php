@@ -24,7 +24,7 @@ class Category
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
 
-    #[ORM\ManyToMany(targetEntity: Article::class, mappedBy: 'category')]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Article::class)]
     private Collection $articles;
 
     public function __construct()
@@ -98,5 +98,10 @@ class Category
         }
 
         return $this;
+    }
+    
+    public function __toString(): string
+    {
+        return $this->name;
     }
 }
