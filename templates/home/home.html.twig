@@ -3,7 +3,7 @@
 {% block title %}Welcome
 {% endblock %}
 {% block body %}
-	{{dump(articles)}}
+	{# {{dump(articles)}} #}
 	<div class="row text-center mt-5 mb-5 rounded py-5 bx-meteor ">
 		<h1>BlogXpress</h1>
 		<h4>Tout sur l'actu des vacances en xpress</h4>
@@ -18,7 +18,8 @@
 		{% for item in articles %}
 			<div class="col-md-3 border rounded shadaw-sm  m-4 p-3">
 				{# <img src="{{ asset('images/articles') }}/{{ item.image }}" class="card-img" alt="{{ item.title }}"> #}
-				{# <div class="card-img-overlay"> #}<h5 class="card-title"> {{ item.title }}</h5>
+				{# <div class="card-img-overlay"> #}
+				<h5 class="card-title"> {{ item.title }}</h5>
 				<p class="card-text">
 					{{ item.content|slice(0,40) }}
 					{# <small>{{ item.category.Name }}</small> #}
