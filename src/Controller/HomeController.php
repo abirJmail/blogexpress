@@ -87,13 +87,13 @@ class HomeController extends AbstractController
     }
 
     // Route pour visionner une categorie seule
-    // #[Route('/category/{id}', name: 'category', methods: ['GET'])]
-    // public function showCategory(Category $category): Response
-    // {
-    //     return $this->render('category/category.html.twig', [
-    //         'category' => $category,
-    //     ]);
-    // }
+    #[Route('/category/{id}', name: 'category', methods: ['GET'])]
+    public function showCategory(Category $category): Response
+    {
+        return $this->render('category/category.html.twig', [
+            'category' => $category,
+        ]);
+    }
 
 
 

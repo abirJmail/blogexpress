@@ -60,14 +60,14 @@ class ArticleType extends AbstractType
                     'class' => 'form-control mb-3'
                 ]
             ])
-            // ->add('isPublished', CheckboxType::class, [
-            //     'required' => false,
-            //     'label' => 'Voulez-vous publier l\'article ?',
-            //     'attr' => [
-            //         'class' => 'form-check-input mx-3 mb-3',
-            //         'type' => 'checkbox',
-            //     ]
-            // ])
+            ->add('isPublished', CheckboxType::class, [
+                'required' => false,
+                'label' => 'Voulez-vous publier l\'article ?',
+                'attr' => [
+                    'class' => 'form-check-input mx-3 mb-3',
+                    'type' => 'checkbox',
+                ]
+            ])
             ->add('Publier', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary rounded-pill mb-3'
