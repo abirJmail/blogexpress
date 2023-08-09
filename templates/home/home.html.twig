@@ -17,7 +17,7 @@
 
 		{% for item in articles %}
 			<div class="col-md-3 border rounded shadaw-sm  m-4 p-3">
-				{# <img src="{{ asset('images/articles') }}/{{ item.image }}" class="card-img" alt="{{ item.title }}"> #}
+				<img src="{{ asset('images/articles') }}/{{ item.image }}" class="card-img" alt="{{ item.title }}">
 				{# <div class="card-img-overlay"> #}
 				<h5 class="card-title"> {{ item.title }}</h5>
 				<p class="card-text">
@@ -25,7 +25,7 @@
 					{# <small>{{ item.category.Name }}</small> #}
 				</p>
 				<h6 class="card-title">{{ item.author.name }}</h6>
-				{# <a href={{ path('article', { id: item.id }) }} class="btn btn-sm btn-warning rounded-pill">Lire l'article</a> #}
+				<a href={{ path('article', { id: item.id }) }} class="btn btn-sm btn-warning rounded-pill">Lire l'article</a>
 				{# </div> #}
 			</div>
 		{% endfor %}
